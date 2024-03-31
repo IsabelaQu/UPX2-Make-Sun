@@ -1,5 +1,5 @@
 CREATE TABLE user (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY UNIQUE,
     nome VARCHAR(50) NOT NULL,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
@@ -16,15 +16,24 @@ CREATE TABLE consumo (
     FOREIGN KEY (id_user) REFERENCES user(id)
 );
 
-INSERT INTO user(id,nome, username, email, senha, endereco, telefone) VALUES
-('1',"Rubens", "rubinho_","rubens24@gmail.com","12345",'18147-000','(11)94122-0235'),
-('2','Maria', 'maria123', 'maria@example.com', 'senha123', 'Rua das Flores, 123', '(11) 98765-4321'),
-('3','João', 'joao456', 'joao@example.com', 'senha456', 'Avenida Principal, 456', '(11) 12345-6789'),
-('4','Ana', 'ana789', 'ana@example.com', 'senha789', 'Travessa das Árvores, 789', '(11) 23456-7890'),
-('5','Pedro', 'pedro321', 'pedro@example.com', 'senha321', 'Praça Central, 321', '(11) 34567-8901'),
-('6','Carla', 'carla654', 'carla@example.com', 'senha654', 'Alameda dos Lagos, 654', '(11) 45678-9012');;
+CREATE TABLE news(
+  id_materia INT NOT NULL UNIQUE,
+  titulo VARCHAR(200) NOT NULL,
+  data VARCHAR(20) NOT NULL,
+  conteudo VARCHAR(10000) NOT NULL,
+  fonte_news VARCHAR(200) NOT NULL
 
-INSERT INTO Consumo (id_user, meta_consumo, consumo_energia, economia_energia)
+);
+
+INSERT INTO user(id,nome, username, email, senha, endereco, telefone) VALUES
+(1,"Rubens", "rubinho_","rubens24@gmail.com","senha938",'18147-000','(11)94122-0235'),
+(2,'Maria', 'maria123', 'maria@example.com', 'senha123', 'Rua das Flores, 123', '(11) 98765-4321'),
+(3,'João', 'joao456', 'joao@example.com', 'senha456', 'Avenida Principal, 456', '(11) 12345-6789'),
+(4,'Ana', 'ana789', 'ana@example.com', 'senha789', 'Travessa das Árvores, 789', '(11) 23456-7890'),
+(5,'Pedro', 'pedro321', 'pedro@example.com', 'senha321', 'Praça Central, 321', '(11) 34567-8901'),
+(6,'Carla', 'carla654', 'carla@example.com', 'senha654', 'Alameda dos Lagos, 654', '(11) 45678-9012');
+
+INSERT INTO consumo (id_user, meta_consumo, consumo_energia, economia_energia)
 VALUES (1, 100.00, 80.00, 20.00),
 (2, 100.00, 62.00, 38.00),
 (3, 100.00, 35.00, 65.00),
@@ -32,5 +41,11 @@ VALUES (1, 100.00, 80.00, 20.00),
 (5, 100.00, 75.00, 25.00),
 (6, 100.00, 95.00, 5.00);
 
+INSERT INTO news(id_materia, titulo, data, conteudo, fonte_news) 
+VALUES (1,'O Futuro da Energia', '24/01/2022', 'Transição Sustentável', 'EnergyMagazine.com'),
+(2, 'O Crescimento das Energias Renováveis', '04/11/2018', 'Sustentabilidade Global', 'CleanTechNews.com'),
+(3, 'Caminho para um Futuro Sustentável', '14/06/2014', 'Inovação Energética', 'EcoFriendlyTimes.org');
+
 SELECT * FROM user;
 SELECT * FROM consumo;
+SELECT * FROM news;
