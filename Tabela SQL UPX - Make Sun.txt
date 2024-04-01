@@ -1,3 +1,4 @@
+/* criação tabela user */
 CREATE TABLE user (
     id INT PRIMARY KEY UNIQUE,
     nome VARCHAR(50) NOT NULL,
@@ -8,6 +9,7 @@ CREATE TABLE user (
     telefone VARCHAR(20) NOT NULL
 );
 
+/* criação tabela de consumo*/
 CREATE TABLE consumo (
     id_user INT not NULL,
     meta_consumo DECIMAL(10,2) NOT NULL,
@@ -16,6 +18,7 @@ CREATE TABLE consumo (
     FOREIGN KEY (id_user) REFERENCES user(id)
 );
 
+/* criação tabela de notícias */
 CREATE TABLE news(
   id_materia INT NOT NULL UNIQUE,
   titulo VARCHAR(200) NOT NULL,
@@ -25,6 +28,7 @@ CREATE TABLE news(
 
 );
 
+/* inserção de valores referente a users */
 INSERT INTO user(id,nome, username, email, senha, endereco, telefone) VALUES
 (1,"Rubens", "rubinho_","rubens24@gmail.com","senha938",'18147-000','(11)94122-0235'),
 (2,'Maria', 'maria123', 'maria@example.com', 'senha123', 'Rua das Flores, 123', '(11) 98765-4321'),
@@ -33,6 +37,7 @@ INSERT INTO user(id,nome, username, email, senha, endereco, telefone) VALUES
 (5,'Pedro', 'pedro321', 'pedro@example.com', 'senha321', 'Praça Central, 321', '(11) 34567-8901'),
 (6,'Carla', 'carla654', 'carla@example.com', 'senha654', 'Alameda dos Lagos, 654', '(11) 45678-9012');
 
+/* inserção de valores referente ao consumo */
 INSERT INTO consumo (id_user, meta_consumo, consumo_energia, economia_energia)
 VALUES (1, 100.00, 80.00, 20.00),
 (2, 100.00, 62.00, 38.00),
@@ -41,11 +46,13 @@ VALUES (1, 100.00, 80.00, 20.00),
 (5, 100.00, 75.00, 25.00),
 (6, 100.00, 95.00, 5.00);
 
+/* inserção de valores referente as notícias */
 INSERT INTO news(id_materia, titulo, data, conteudo, fonte_news) 
 VALUES (1,'O Futuro da Energia', '24/01/2022', 'Transição Sustentável', 'EnergyMagazine.com'),
 (2, 'O Crescimento das Energias Renováveis', '04/11/2018', 'Sustentabilidade Global', 'CleanTechNews.com'),
 (3, 'Caminho para um Futuro Sustentável', '14/06/2014', 'Inovação Energética', 'EcoFriendlyTimes.org');
 
-SELECT * FROM user;
-SELECT * FROM consumo;
-SELECT * FROM news;
+/* selects para visualização de tabelas */
+SELECT*FROM user;
+SELECT*FROM consumo;
+SELECT*from news;
