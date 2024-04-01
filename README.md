@@ -16,7 +16,7 @@
 
 
 
-<h1 text-align="center" style="margin-bottom: 70px;">Make Sun app prototype on Figma Mobile</h1>
+<h1 align="center" style="margin-bottom: 70px;">Make Sun app prototype on Figma Mobile</h1>
 
 <img src="Figma-prototipo.png"/>
 
