@@ -9,7 +9,8 @@
 
 
 
-<h1 align="left"><b>Make Sun app prototype on Figma Mobile<b></h1>
+<h1 align="left">Make Sun app prototype on Figma Mobile</h1>
 
+<img src="Figma-prototipo.png"/>
 
 <br>
