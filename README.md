@@ -1,4 +1,4 @@
-<img src="logo-makeSun.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
+<img src="icon-makeSun.png" min-width="400px" max-width="400px" width="400px" align="right" alt="Computador iuriCode">
 
 <h1 align="left"><b>Make Sun </b><img src="logo-makeSun.png" width="35">
 </h1>
