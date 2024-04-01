@@ -8,12 +8,7 @@
 </p>
 
 
-
-
-
-
-
-
+---
 
 
 <h1 align="center" style="margin-bottom: 70px;">Make Sun app prototype on Figma Mobile</h1>
