@@ -1,0 +1,57 @@
+.background {
+    background-color: #172C6B;
+  }
+  
+  .container {
+    height: 100vh;
+  }
+  
+  .register-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+  }
+  
+  h5, h6 {
+    color: #FFF;
+  }
+  
+  .form-control {
+    border-radius: 5px;
+  }
+  
+  .form-check-label {
+    color: #60C2E0;
+  }
+  
+  .position-relative .icon {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #ccc;
+    pointer-events: none;
+  }
+  
+  .btn-block {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .btn-primary {
+    border-radius: 10px;
+    background: linear-gradient(90deg, #E1BE3F 14.43%, #DF709A 100%);
+    color: #FFF;
+  }
+  
+  .text-decoration-none {
+    color: #60C2E0;
+  }
+  
+  .text-decoration-none:hover {
+    text-decoration: underline;
+  }
+  
